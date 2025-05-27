@@ -2,9 +2,11 @@ package com.example.shoppage.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.shoppage.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -32,3 +34,7 @@ val Typography = Typography(
     )
     */
 )
+
+val TangerineFont = FontFamily(Font(R.font.tangerine))
+val NeuzitSBook = FontFamily(Font(R.font.neuzeit_s_book))
+val CenturyOldStyleBold = FontFamily(Font(R.font.century_old_style_std_bold))
