@@ -50,7 +50,7 @@ import com.example.shoppage.utils.composables.StarRating
 @Composable
 fun ProductsList(productList: List<Product>, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
-        Row(modifier = modifier.padding(bottom = 10.dp)) {
+        Row(modifier = modifier.padding(bottom = 16.dp)) {
             Text(
                 text = "New Products",
                 style = CenturyOldStyleTextStyle,

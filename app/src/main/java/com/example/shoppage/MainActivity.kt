@@ -21,7 +21,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.shoppage.data.Category
 import com.example.shoppage.data.Product
+import com.example.shoppage.ui.screens.CategoryList
 import com.example.shoppage.ui.screens.ProductsList
 import com.example.shoppage.ui.theme.CenturyOldStyleTextStyle
 import com.example.shoppage.ui.theme.ShopPageTheme
@@ -108,6 +110,10 @@ fun MainScreen(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         // TODO: add content
+        CategoryList(
+            categoryList = List(10) { Category() },
+            onCategoryClick = {}
+        )
         ProductsList(productList = List(5) { Product() })
     }
 }
