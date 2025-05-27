@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -106,7 +107,7 @@ fun ProductItem(product: Product, onProductClick: () -> Unit, onFavouriteClick: 
                 modifier = Modifier.size(30.dp)
             )
         }
-        Column(modifier = Modifier.padding(vertical = 12.dp, horizontal = 8.dp),) {
+        Column(modifier = Modifier.padding(vertical = 12.dp, horizontal = 8.dp)) {
             Card(
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.Black),
@@ -132,7 +133,9 @@ fun ProductItem(product: Product, onProductClick: () -> Unit, onFavouriteClick: 
             Box {
                 Image(
                     painter = painterResource(R.drawable.product_title_card),
-                    contentDescription = null
+                    contentDescription = null,
+                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier.fillMaxWidth()
                 )
                 Column(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
@@ -189,7 +192,7 @@ fun ProductItem(product: Product, onProductClick: () -> Unit, onFavouriteClick: 
         IconButton(
             onClick = {},
             modifier = Modifier
-                .padding(bottom = 34.dp, end = 16.dp)
+                .padding(bottom = 26.dp, end = 20.dp)
                 .align(Alignment.BottomEnd)
                 .border(shape = CircleShape, color = Neon, width = 2.dp)
         ) {
