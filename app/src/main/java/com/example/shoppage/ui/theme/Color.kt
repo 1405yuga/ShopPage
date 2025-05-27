@@ -11,3 +11,5 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val Neon = Color(0xFFB2E543)
+val Red = Color(0xFFE82E59)
+val Gold = Color(0xFFFFD700)

@@ -35,8 +35,12 @@ val Typography = Typography(
     */
 )
 
-val TangerineFont = FontFamily(Font(R.font.tangerine))
 val NeuzitSBook = FontFamily(Font(R.font.neuzeit_s_book))
+val TangerineTextStyle = TextStyle(
+    fontFamily = FontFamily(Font(R.font.tangerine)),
+    fontSize = 20.sp,
+    color = Neon
+)
 val CenturyOldStyleTextStyle = TextStyle(
     fontFamily = FontFamily(Font(R.font.century_old_style_std_bold)),
     fontSize = 24.sp

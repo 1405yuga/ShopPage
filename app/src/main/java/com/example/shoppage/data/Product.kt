@@ -11,7 +11,8 @@ data class Product(
     val inStock: Boolean = true,
     val isBestSeller: Boolean = true,
     val isFavourite: Boolean = false,
-    val price: Int = 325,
+    val actualPrice: Float = 444f,
+    val discountedPrice: Float = 355.20f,
     val rating: Int = 4,
     val reviews: Int = 245
 )
