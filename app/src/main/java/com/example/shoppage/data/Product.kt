@@ -1,15 +1,17 @@
 package com.example.shoppage.data
 
-import androidx.compose.ui.graphics.ImageBitmap
+import com.example.shoppage.R
 
 data class Product(
-    val productId: Long,
-    val productName: String,
-    val productImage: ImageBitmap,
-    val description: String,
-    val suitableSkinType: List<String>,
-    val inStock: Boolean,
-    val price: Int,
-    val rating: Int,
-    val reviews: Int
+    val productId: Long = 1,
+    val productName: String = "Some Product",
+    val productImage: Int = R.drawable.product_image,
+    val description: String = "Very useful",
+    val suitableSkinType: List<String> = listOf("Oily Skin", "Dry & Dehyrated Skin"),
+    val inStock: Boolean = true,
+    val isBestSeller: Boolean = true,
+    val isFavourite: Boolean = false,
+    val price: Int = 325,
+    val rating: Int = 4,
+    val reviews: Int = 245
 )

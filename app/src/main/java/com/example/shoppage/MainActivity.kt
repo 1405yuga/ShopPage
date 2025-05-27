@@ -3,6 +3,8 @@ package com.example.shoppage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -18,7 +20,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.shoppage.ui.theme.CenturyOldStyleBold
+import androidx.compose.ui.unit.dp
+import com.example.shoppage.data.Product
+import com.example.shoppage.ui.screens.ProductsList
+import com.example.shoppage.ui.theme.CenturyOldStyleTextStyle
 import com.example.shoppage.ui.theme.ShopPageTheme
 import com.example.shoppage.utils.annotations.HorizontalScreenPreview
 import com.example.shoppage.utils.annotations.VerticalScreenPreview
@@ -54,7 +59,7 @@ fun TitleBar(
     onAddToCartClick: () -> Unit
 ) {
     TopAppBar(
-        title = { Text(text = "Shop", fontFamily = CenturyOldStyleBold) },
+        title = { Text(text = "Shop", style = CenturyOldStyleTextStyle) },
         navigationIcon = {
             IconButton(onClick = { onBackClick() }) {
                 Icon(Icons.Default.ArrowBack, contentDescription = "Back Button")
@@ -98,7 +103,13 @@ fun TitleBarHorizontalPreview() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-
+    Column(
+        modifier = modifier.padding(horizontal = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        // TODO: add content
+        ProductsList(productList = List(5) { Product() })
+    }
 }
 
 @VerticalScreenPreview
