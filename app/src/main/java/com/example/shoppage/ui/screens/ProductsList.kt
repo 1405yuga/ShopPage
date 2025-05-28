@@ -67,7 +67,6 @@ fun ProductsList(productList: List<Product>, modifier: Modifier = Modifier) {
             items(productList) { product ->
                 ProductItem(
                     product,
-                    onProductClick = {},
                     onFavouriteClick = {},
                 )
             }
@@ -88,7 +87,7 @@ fun ProductListHorizontal() {
 }
 
 @Composable
-fun ProductItem(product: Product, onProductClick: () -> Unit, onFavouriteClick: () -> Unit) {
+fun ProductItem(product: Product, onFavouriteClick: () -> Unit) {
     Box {
         Image(
             painter = painterResource(R.drawable.product_bg_card),
@@ -208,5 +207,5 @@ fun ProductItem(product: Product, onProductClick: () -> Unit, onFavouriteClick: 
 @Composable
 @VerticalScreenPreview
 fun ProductItemVerticalPreview() {
-    ProductItem(product = Product(), onProductClick = {}, onFavouriteClick = {})
+    ProductItem(product = Product(), onFavouriteClick = {})
 }
