@@ -22,8 +22,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.shoppage.data.Category
+import com.example.shoppage.data.Discount
 import com.example.shoppage.data.Product
 import com.example.shoppage.ui.screens.CategoryList
+import com.example.shoppage.ui.screens.DiscountSwiper
 import com.example.shoppage.ui.screens.ProductsList
 import com.example.shoppage.ui.theme.CenturyOldStyleTextStyle
 import com.example.shoppage.ui.theme.ShopPageTheme
@@ -106,10 +108,12 @@ fun TitleBarHorizontalPreview() {
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier.padding(horizontal = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        modifier = modifier
+            .padding(horizontal = 12.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         // TODO: add content
+        DiscountSwiper(discountList = List(3) { Discount() })
         CategoryList(
             categoryList = List(10) { Category() },
             onCategoryClick = {}
