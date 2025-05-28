@@ -6,7 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.outlined.FavoriteBorder
@@ -109,16 +112,16 @@ fun TitleBarHorizontalPreview() {
 fun MainScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .padding(horizontal = 12.dp),
+            .padding(horizontal = 12.dp)
+            .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        // TODO: add content
         DiscountSwiper(discountList = List(3) { Discount() })
         CategoryList(
             categoryList = List(10) { Category() },
             onCategoryClick = {}
         )
-        ProductsList(productList = List(5) { Product() })
+        ProductsList(productList = List(5) { Product() }, modifier = Modifier.height(1500.dp))
     }
 }
 
